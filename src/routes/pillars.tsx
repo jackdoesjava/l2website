@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import iconAsset from "@/assets/l2r-icon.png.asset.json";
 import { usePillars } from "@/lib/site-content";
 import { QuantCanvas } from "@/components/quant-canvas";
 
@@ -24,6 +23,18 @@ export const Route = createFileRoute("/pillars")({
 
 function Pillars() {
   const { data: pillars = [] } = usePillars();
+  const count = pillars.length;
+  const word =
+    ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"][count] ??
+    String(count);
+  const cols =
+    count <= 1
+      ? "md:grid-cols-1 lg:grid-cols-1 max-w-xl"
+      : count === 2
+        ? "md:grid-cols-2 lg:grid-cols-2 max-w-4xl"
+        : count === 3
+          ? "md:grid-cols-3 lg:grid-cols-3 max-w-6xl"
+          : "md:grid-cols-2 lg:grid-cols-4 max-w-none";
   return (
     <section className="relative overflow-hidden bg-ink text-ice">
       <QuantCanvas
@@ -38,14 +49,15 @@ function Pillars() {
               § Research Pillars
             </div>
             <h1 className="mt-5 font-display text-[28px] font-semibold leading-tight tracking-tight text-ice lg:text-[36px]">
-              Four areas of active work.
+              {word} area{count === 1 ? "" : "s"} of active work.
             </h1>
           </div>
-          <img src={iconAsset.url} alt="" className="hidden h-14 w-14 opacity-90 md:block" />
         </div>
-        <div className="grid grid-cols-1 divide-y divide-white/10 border-b border-white/10 md:grid-cols-2 md:divide-y-0 md:[&>*]:border-b md:[&>*]:border-white/10 lg:grid-cols-4 lg:divide-x lg:divide-y-0 lg:[&>*]:border-b-0">
+        <div
+          className={`mx-auto grid grid-cols-1 divide-y divide-white/10 border-b border-white/10 md:divide-y-0 md:divide-x lg:divide-x ${cols}`}
+        >
           {pillars.map((p) => (
-            <div key={p.id} className="px-0 py-10 md:px-8 lg:first:pl-0 lg:last:pr-0">
+            <div key={p.id} className="px-0 py-10 md:px-8">
               <div className="font-display text-[11px] font-medium tracking-[0.22em] text-forest">
                 — {p.tag}
               </div>

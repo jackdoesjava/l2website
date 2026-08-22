@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import iconAsset from "@/assets/l2r-icon.png.asset.json";
 import { QuantCanvas } from "@/components/quant-canvas";
 import { usePillars } from "@/lib/site-content";
 
@@ -117,7 +116,13 @@ function Home() {
         <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-12">
           <div className="flex flex-wrap items-center justify-between gap-6">
             <div className="flex items-center gap-4">
-              <img src={iconAsset.url} alt="" className="h-10 w-10 shrink-0 opacity-90" />
+              <img
+                src="/l2r-icon.png"
+                alt=""
+                width={40}
+                height={40}
+                className="h-10 w-10 shrink-0 opacity-90"
+              />
               <div className="leading-tight">
                 <div className="font-display text-[11px] font-medium uppercase tracking-[0.22em] text-forest">
                   Recruitment · Open

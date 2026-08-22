@@ -91,9 +91,11 @@ function initials(name: string) {
 
 function MemberCard({ m }: { m: Member }) {
   const linkedInUrl = normalizeUrl(m.linkedin_url ?? "");
+  const className =
+    "group relative flex flex-col border border-border bg-card transition-colors hover:border-forest/60";
 
-  return (
-    <article className="group relative flex flex-col border border-border bg-card transition-colors hover:border-forest/60">
+  const content = (
+    <>
       <div className="relative aspect-[4/4.6] w-full overflow-hidden bg-secondary">
         {m.photo_signed_url ? (
           <img
@@ -121,26 +123,25 @@ function MemberCard({ m }: { m: Member }) {
             {m.bio}
           </p>
         )}
-        {m.linkedin_url && (
-          <a
-            href={linkedInUrl}
-            target="_blank"
-            rel="noreferrer noopener external"
-            onClick={(event) => {
-              event.preventDefault();
-              window.open(linkedInUrl, "_blank", "noopener,noreferrer");
-            }}
-            className="mt-3 inline-flex items-center gap-2 font-display text-[10px] font-medium uppercase tracking-[0.2em] text-foreground/70 transition-colors hover:text-forest"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-3.5 w-3.5 fill-current">
-              <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.06c.53-.95 1.83-1.95 3.77-1.95C20.6 8.75 22 11 22 14.24V21h-4v-6c0-1.43-.03-3.27-2-3.27-2 0-2.3 1.56-2.3 3.17V21H9z" />
-            </svg>
-            LinkedIn
-          </a>
-        )}
       </div>
-    </article>
+    </>
   );
+
+  if (linkedInUrl) {
+    return (
+      <a
+        href={linkedInUrl}
+        target="_blank"
+        rel="noreferrer noopener"
+        aria-label={`${m.name} — ${m.role} (LinkedIn)`}
+        className={`${className} cursor-pointer`}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return <article className={className}>{content}</article>;
 }
 
 function Members() {

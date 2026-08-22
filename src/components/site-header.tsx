@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, Moon, Sun, X } from "lucide-react";
-import iconAsset from "@/assets/l2r-icon.png.asset.json";
 import { useTheme } from "@/lib/theme";
 
 const NAV = [
@@ -42,7 +41,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-10">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={iconAsset.url} alt="" className="h-11 w-11" />
+          <img src="/l2r-icon.png" alt="" width={44} height={44} className="h-11 w-11" />
           <span className="font-display text-[19px] font-semibold tracking-tight text-foreground">
             L<sup className="text-[12px] text-forest">2</sup> Research
           </span>
