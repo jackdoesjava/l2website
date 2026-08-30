@@ -5,16 +5,16 @@ import { QuantCanvas } from "@/components/quant-canvas";
 export const Route = createFileRoute("/pillars")({
   head: () => ({
     meta: [
-      { title: "Research Pillars — L² Research" },
+      { title: "Pillars · L² Research" },
       {
         name: "description",
         content:
-          "The four areas of active work at L² Research: statistical arbitrage, derivatives and volatility, machine learning in markets, and market microstructure.",
+          "Two independent pillars at L² Research. Research Engineering covers topics such as bare-metal systems, low-latency infrastructure, high-performance computing and machine learning. Mathematical Frameworks covers topics such as measure-theoretic probability, stochastic calculus, game theory, optimisation and formal verification. Neither list is closed.",
       },
-      { property: "og:title", content: "Research Pillars — L² Research" },
+      { property: "og:title", content: "Pillars · L² Research" },
       {
         property: "og:description",
-        content: "Four areas of active quantitative work.",
+        content: "Two independent pillars: research engineering and mathematical frameworks.",
       },
     ],
   }),
@@ -46,10 +46,10 @@ function Pillars() {
           <div>
             <div className="flex items-center gap-3 font-display text-[11px] font-medium uppercase tracking-[0.22em] text-forest">
               <span className="inline-block h-px w-8 bg-forest" />
-              § Research Pillars
+              § Pillars
             </div>
             <h1 className="mt-5 font-display text-[28px] font-semibold leading-tight tracking-tight text-ice lg:text-[36px]">
-              {word} area{count === 1 ? "" : "s"} of active work.
+              {word} independent pillar{count === 1 ? "" : "s"}.
             </h1>
           </div>
         </div>

@@ -4,13 +4,13 @@ import { useMembers, type Member } from "@/lib/site-content";
 export const Route = createFileRoute("/members")({
   head: () => ({
     meta: [
-      { title: "Members — L² Research" },
+      { title: "Members · L² Research" },
       {
         name: "description",
         content:
-          "The people behind L² Research — President, Research Leads and Analysts.",
+          "The people behind L² Research. Research engineering and mathematical frameworks.",
       },
-      { property: "og:title", content: "Members — L² Research" },
+      { property: "og:title", content: "Members · L² Research" },
       {
         property: "og:description",
         content: "A small group, held to one bar.",
@@ -100,7 +100,7 @@ function MemberCard({ m }: { m: Member }) {
         {m.photo_signed_url ? (
           <img
             src={m.photo_signed_url}
-            alt={`${m.name} — ${m.role}, L² Research`}
+            alt={`${m.name}, ${m.role}, L² Research`}
             loading="lazy"
             className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-[1.03]"
           />
@@ -133,7 +133,7 @@ function MemberCard({ m }: { m: Member }) {
         href={linkedInUrl}
         target="_blank"
         rel="noreferrer noopener"
-        aria-label={`${m.name} — ${m.role} (LinkedIn)`}
+        aria-label={`${m.name}, ${m.role} (LinkedIn)`}
         className={`${className} cursor-pointer`}
       >
         {content}

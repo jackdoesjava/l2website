@@ -5,16 +5,16 @@ import { usePillars } from "@/lib/site-content";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — L² Research" },
+      { title: "About · L² Research" },
       {
         name: "description",
         content:
-          "L² Research is an independent quantitative research group founded at the University of Surrey. Learn what we do, why we exist, and how we operate.",
+          "L² Research is an independent research pod working across quantitative finance, low-level systems engineering and machine learning. What we do, why we exist, and how we operate.",
       },
-      { property: "og:title", content: "About — L² Research" },
+      { property: "og:title", content: "About · L² Research" },
       {
         property: "og:description",
-        content: "What L² Research is, why it exists, and what distinguishes it.",
+        content: "What L² Research is, why it exists, and the bar it holds.",
       },
     ],
   }),
@@ -47,11 +47,11 @@ function About() {
               <span className="font-semibold text-forest">held to one bar</span>.
             </h1>
             <p className="mt-10 max-w-xl font-sans text-[16px] leading-relaxed text-ice/85 lg:text-[18px]">
-              L² Research is an independent, student-founded quantitative
-              research group. We were built for one purpose: to produce work
-              that would defend itself in front of academic and industry
-              professionals — and to hold ourselves to that standard, cohort
-              after cohort.
+              L² Research is an independent research pod based in the UK. We
+              work across quantitative finance, low-level systems engineering
+              and machine learning. Everything we ship is built to defend
+              itself in front of industry professionals, and every member is
+              held to that.
             </p>
           </div>
         </div>
@@ -60,10 +60,10 @@ function About() {
         <div className="relative z-10 border-t border-ice/10 bg-[color-mix(in_srgb,var(--color-ink)_85%,transparent)] backdrop-blur">
           <dl className="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 gap-y-6 px-6 py-8 sm:grid-cols-4 lg:px-10">
             {[
-              { k: "Founded", v: "2026" },
-              { k: "Institution", v: "Surrey" },
+              { k: "Established", v: "2026" },
+              { k: "Base", v: "UK" },
               { k: "Pillars", v: String(pillars.length).padStart(2, "0") },
-              { k: "Cohort", v: "26 / 27" },
+              { k: "Intake", v: "Open" },
             ].map((s) => (
               <div key={s.k}>
                 <dt className="eyebrow text-ice/60">{s.k}</dt>
@@ -85,21 +85,24 @@ function About() {
           </div>
           <div className="space-y-6 font-sans text-[16px] leading-relaxed text-foreground/85 lg:col-span-7 lg:col-start-6 lg:text-[17px]">
             <p className="font-display text-[19px] font-light italic text-foreground lg:text-[22px]">
-              Most student finance groups optimise for photos, panels and
-              prizes. We optimise for one thing — output that a serious reader
+              Most groups optimise for signalling: panels, prizes, a logo on
+              a slide. We optimise for one thing: output a serious reader
               cannot dismiss.
             </p>
             <p>
-              We are not a society. We are not a trading club. We do not run
-              stock pitch competitions. We publish rigorous, data-driven and
-              theoretical work in volatility modelling, mathematical finance
-              and statistical methods, and we recruit new analysts each year
-              against that single criterion.
+              We are not a trading club. We do not run pitch competitions. We
+              build and we publish. Two pillars carry the work. Under research
+              engineering, topics such as bare-metal systems, low-latency
+              infrastructure, high-performance computing and machine learning.
+              Under mathematical frameworks, topics such as measure-theoretic
+              probability, stochastic calculus, game theory, optimisation and
+              formal verification. Neither list is closed.
             </p>
             <p>
-              Every note, working paper and replication is written to be
-              technically defensible and self-contained. If it cannot be
-              defended in a room of quants, it does not go out under our name.
+              Every output stands on its own. The method is documented, the
+              data is traceable, and the result can be checked by anyone who
+              reads it. If it cannot survive a room of quants, it does not go
+              out under our name.
             </p>
           </div>
         </div>
@@ -116,10 +119,10 @@ function About() {
           </div>
           <div className="mt-10 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { k: "Rigour", v: "Real work, held to a professional standard — not a student one. Assumptions are stated, methods are cited, results are reproducible." },
-              { k: "Selectivity", v: "Membership is earned. Every analyst is expected to defend their output in front of the group before it ships." },
-              { k: "Independence", v: "Not a society, not a networking body. We answer to the work, and we recruit against it — not against social credit." },
-              { k: "Restraint", v: "Precision and consistency over visual complexity. Clarity is the aesthetic; the paper does the talking." },
+              { k: "Theory & Systems", v: "Two pillars, equal weight. A stochastic calculus proof and a backtesting engine answer to the same bar: assumptions stated, method documented, result reproducible." },
+              { k: "Selectivity", v: "Membership is earned. Every member defends their output in front of the group before it ships, then defends it again in public." },
+              { k: "Open Research", v: "We publish. Papers, source code, benchmark numbers and the failures. Work nobody can read or run is work nobody can check." },
+              { k: "Independence", v: "No house view, no sponsor, no mandate to please. We answer to the work, and we recruit against it, not against social credit." },
             ].map((it, i) => (
               <div key={it.k} className="border-t border-forest/40 pt-5">
                 <div className="font-display text-[11px] font-medium uppercase tracking-[0.22em] text-forest">
@@ -148,17 +151,17 @@ function About() {
               A single loop, run to completion.
             </h2>
             <p className="mt-6 max-w-md font-sans text-[15px] leading-relaxed text-ice/80 lg:text-[16px]">
-              We keep the workflow deliberately narrow. Every piece we publish
-              has moved through the same four steps — no shortcuts, no
+              One workflow, deliberately narrow. Every paper, proof and system
+              we ship has moved through the same four steps. No shortcuts, no
               exceptions, regardless of who is writing it.
             </p>
           </div>
           <ol className="lg:col-span-7 lg:col-start-6">
             {[
-              { k: "Frame", v: "A precise question and a hypothesis worth falsifying. Vague topics are turned back at the door." },
-              { k: "Model", v: "Assumptions written down. Method chosen for reasons, not familiarity. Data provenance documented." },
-              { k: "Defend", v: "Internal review with the pillar lead. Robustness checks, sensitivity, and honest limitations." },
-              { k: "Publish", v: "Public working paper or note, with code and data where possible. Failures documented as clearly as wins." },
+              { k: "Frame", v: "A precise question and a falsifiable claim, or a system with a target and a latency budget. Vague topics are turned back at the door." },
+              { k: "Build", v: "Model or implementation. Assumptions written down, method chosen for reasons rather than familiarity, data provenance and source under version control." },
+              { k: "Defend", v: "Internal review with the pillar lead. Sensitivity checks, benchmarks against a baseline, formal verification where the claim allows it, and honest limitations." },
+              { k: "Publish", v: "Working paper, source code and benchmark numbers, in public. Failures documented as clearly as results." },
             ].map((s, i) => (
               <li
                 key={s.k}
@@ -184,10 +187,10 @@ function About() {
             <div className="eyebrow">§ 04 · Timeline</div>
             <ol className="mt-8 space-y-6">
               {[
-                { t: "Q1 2026", h: "Founding", b: "L² Research is formed at the University of Surrey around a small group of STEM students." },
-                { t: "Q2 2026", h: "Four pillars set", b: "Statistical Arbitrage · Derivatives & Volatility · Machine Learning · Market Microstructure." },
-                { t: "Q3 2026", h: "First cohort", b: "Recruitment opens for the 2026 / 27 analyst cohort. Selection is against the work, not credentials alone." },
-                { t: "Q4 2026", h: "First public papers", b: "Initial working papers and replications published under the group's name." },
+                { t: "Q1 2026", h: "Founding", b: "L² Research is formed in the UK around a small group of engineers and mathematicians." },
+                { t: "Q2 2026", h: "Two pillars set", b: "Research Engineering · Mathematical Frameworks. Two tracks, one standard." },
+                { t: "Q3 2026", h: "First intake", b: "Selection opens. Candidates are judged on what they have built and proved, not on credentials." },
+                { t: "Q4 2026", h: "First public output", b: "Initial working papers, benchmarks and source code published under the group's name." },
               ].map((e) => (
                 <li key={e.t} className="grid grid-cols-[110px_1fr] gap-5 border-l-2 border-forest/50 pl-5">
                   <span className="font-display text-[11px] font-medium uppercase tracking-[0.22em] text-forest">{e.t}</span>
@@ -212,8 +215,8 @@ function About() {
               ))}
             </ul>
             <p className="mt-6 font-sans text-[14px] leading-relaxed text-foreground/70">
-              Each pillar is led by a member responsible for standards,
-              review and the pipeline of work published under that heading.
+              Each pillar has a lead who owns the standard, runs review and
+              holds the pipeline of work published under that heading.
             </p>
           </div>
         </div>
@@ -223,9 +226,9 @@ function About() {
       <section className="bg-background">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-6 py-16 lg:flex-row lg:items-end lg:px-10 lg:py-20">
           <p className="max-w-xl font-display text-[24px] font-light leading-snug text-foreground lg:text-[30px]">
-            Four pillars. One bar.
+            Two pillars. One bar.
             <br />
-            <span className="text-forest">Read the work, or apply to join.</span>
+            <span className="text-forest">Read the work, or join us.</span>
           </p>
           <div className="flex flex-wrap gap-3">
             <Link to="/research" className="apply-cta-sm">
@@ -238,7 +241,7 @@ function About() {
               to="/apply"
               className="inline-flex items-center gap-2 border border-foreground/30 px-4 py-2 font-display text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground transition-colors hover:border-forest hover:text-forest"
             >
-              Apply
+              Join
             </Link>
           </div>
         </div>

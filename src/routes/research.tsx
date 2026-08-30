@@ -8,13 +8,13 @@ import { PdfThumb } from "@/components/pdf-thumb";
 export const Route = createFileRoute("/research")({
   head: () => ({
     meta: [
-      { title: "Research — L² Research" },
+      { title: "Research · L² Research" },
       {
         name: "description",
         content:
-          "Papers from L² Research. Peer-reviewed internally, held to institutional standards.",
+          "Papers, models, and benchmarks from L² Research. Reviewed internally, held to the standard we would defend at a desk.",
       },
-      { property: "og:title", content: "Research — L² Research" },
+      { property: "og:title", content: "Research · L² Research" },
       { property: "og:description", content: "Papers from L² Research." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -87,9 +87,9 @@ function Research() {
                 <span className="italic text-ice/85">to be read twice.</span>
               </h1>
               <p className="mt-6 max-w-2xl font-sans text-[15px] leading-relaxed text-ice/70 lg:text-[16px]">
-                Papers produced by members of L². Every draft is internally
-                peer-reviewed and held to the standard we would use to defend it
-                at a desk.
+                Papers, models, and benchmarks from L². Every result is reviewed
+                internally and held to the standard we would use to defend it at
+                a desk.
               </p>
             </div>
 

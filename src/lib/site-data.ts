@@ -1,23 +1,13 @@
 export const PILLARS = [
   {
     tag: "01",
-    title: "Statistical Arbitrage",
-    body: "Cross-sectional signals, factor decomposition, and empirical tests of mean-reversion across equity universes.",
+    title: "Mathematical Frameworks",
+    body: "Topics such as measure-theoretic probability, stochastic calculus, game theory, optimisation and formal verification. The list is not closed. Results are stated precisely and verified formally.",
   },
   {
     tag: "02",
-    title: "Derivatives & Volatility",
-    body: "Options surfaces, variance structure, and the pricing of risk in listed and OTC markets.",
-  },
-  {
-    tag: "03",
-    title: "Machine Learning in Markets",
-    body: "Model design under non-stationarity. Where learning helps, where it fails, and how to tell the difference.",
-  },
-  {
-    tag: "04",
-    title: "Market Microstructure",
-    body: "Order book dynamics, execution cost, and the mechanics that shape observed price behavior.",
+    title: "Research Engineering",
+    body: "Topics such as bare-metal systems, low-latency infrastructure, high-performance computing and machine learning. The list is not closed. Written close to the metal, in Rust and C++.",
   },
 ] as const;
 
@@ -25,18 +15,18 @@ export const PAPERS = [
   {
     tag: "Working Paper",
     date: "2026",
-    title: "Cross-Sectional Momentum in Thinly Traded Equities",
+    title: "Selective State Space Models on Tick-Level Sequences",
     authors: "L² Research",
     abstract:
-      "A revisit of intermediate-horizon momentum on constrained universes, controlling for liquidity and estimation error in the sort.",
+      "Mamba benchmarked against transformer baselines on raw order flow. Linear-time inference holds at sequence length. The accuracy gap does not.",
   },
   {
     tag: "Note",
     date: "2026",
-    title: "The Term Structure of Realized Variance",
+    title: "Equilibrium Under Latency Asymmetry",
     authors: "L² Research",
     abstract:
-      "Empirical properties of realized variance across horizons on major index constituents, and their implications for variance swap pricing.",
+      "A game-theoretic model of quoting when participants observe the book at different delays. Existence and uniqueness of the equilibrium, with a closed form in the two-player case.",
   },
   {
     tag: "Working Paper",
@@ -50,8 +40,8 @@ export const PAPERS = [
 
 export const MEMBERS = [
   { name: "TBD", role: "President", bio: "Founding lead. Overall direction and standards." },
-  { name: "TBD", role: "Research Lead — Volatility", bio: "Derivatives and variance structure." },
-  { name: "TBD", role: "Research Lead — Statistics", bio: "Cross-sectional signals and inference." },
+  { name: "TBD", role: "Engineering Lead", bio: "Systems architecture and low-latency infrastructure." },
+  { name: "TBD", role: "Mathematics Lead", bio: "Stochastic calculus and formal verification." },
   { name: "TBD", role: "Analyst", bio: "Contributing to active working papers." },
   { name: "TBD", role: "Analyst", bio: "Contributing to active working papers." },
   { name: "TBD", role: "Analyst", bio: "Contributing to active working papers." },

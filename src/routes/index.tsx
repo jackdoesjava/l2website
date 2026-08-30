@@ -5,16 +5,16 @@ import { usePillars } from "@/lib/site-content";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "L² Research — Independent Quantitative Research Group" },
+      { title: "L² Research · Independent Quantitative Research" },
       {
         name: "description",
         content:
-          "L² Research is an independent, student-founded quantitative research group at the University of Surrey. Rigorous, selective, restrained.",
+          "L² Research is an independent research group working at the intersection of mathematical finance, advanced machine learning, and low-latency infrastructure. We build, we publish. Membership is earned.",
       },
       { property: "og:title", content: "L² Research" },
       {
         property: "og:description",
-        content: "Independent quantitative research. Rigorous, selective, restrained.",
+        content: "Independent quantitative research and systems engineering. Membership is earned.",
       },
     ],
   }),
@@ -43,18 +43,17 @@ function Home() {
             <h1 className="mt-8 font-display text-[44px] font-light leading-[1.05] text-ice sm:text-[60px] lg:text-[76px]">
               Independent
               <br />
-              quantitative research,
-              <br />
-              held to a <span className="font-semibold text-forest">higher standard</span>.
+              <span className="font-semibold text-forest">quantitative research</span>.
             </h1>
             <p className="mt-10 max-w-xl font-sans text-[15px] leading-relaxed text-ice/80 lg:text-[17px]">
-              A student-founded quantitative research group producing rigorous,
-              data-driven and theoretical work in volatility modelling,
-              mathematical finance and statistical methods. Membership is earned.
+              An independent research group operating at the intersection of
+              mathematical finance, machine learning, and low-latency
+              infrastructure. We build, we publish, and we operate on a strict
+              technical bar. Membership is earned.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link to="/apply" className="apply-cta">
-                Apply <span aria-hidden>→</span>
+                Join <span aria-hidden>→</span>
               </Link>
               <Link
                 to="/research"
@@ -68,10 +67,10 @@ function Home() {
           <div className="mt-16 grid grid-cols-3 gap-6 border-t border-ice/10 pt-8 lg:max-w-xl">
             <Stat
               k={String(pillarCount).padStart(2, "0")}
-              v={pillarCount === 1 ? "Research pillar" : "Research pillars"}
+              v={pillarCount === 1 ? "Independent pillar" : "Independent pillars"}
             />
-            <Stat k="2026" v="Founded" />
-            <Stat k="UoS" v="University of Surrey" />
+            <Stat k="2026" v="Established" />
+            <Stat k="UK" v="Based" />
           </div>
         </div>
       </section>
@@ -80,24 +79,24 @@ function Home() {
         <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-28">
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-4">
-              <div className="eyebrow">§ Positioning</div>
+              <div className="eyebrow">§ The Standard</div>
               <h2 className="mt-5 font-display text-[28px] font-semibold leading-tight tracking-tight text-foreground lg:text-[34px]">
                 What the group is, and is not.
               </h2>
             </div>
             <div className="lg:col-span-7 lg:col-start-6">
               <p className="font-sans text-[16px] leading-relaxed text-foreground/85 lg:text-[18px]">
-                We produce quantitative research at a professional standard. We
-                are not a trading club. We are not a networking society. Every
-                output — a note, a working paper, a replication — is expected
-                to be technically defensible and self-contained.
+                We produce quantitative research at an industry standard. We are
+                not a trading club. We are not a networking society. Every output
+                is expected to be technically defensible and mathematically
+                verified.
               </p>
               <dl className="mt-12 grid gap-x-10 gap-y-8 sm:grid-cols-2">
                 {[
-                  { k: "Rigour", v: "The work is real and held to a high standard." },
-                  { k: "Selectivity", v: "Membership is earned, not assumed." },
-                  { k: "Credibility", v: "Worth the attention of industry professionals." },
-                  { k: "Restraint", v: "Precision and consistency, not visual complexity." },
+                  { k: "Theory & Systems", v: "We bridge pure mathematical theory with bare-metal systems engineering." },
+                  { k: "Selectivity", v: "We evaluate execution and rate of learning over mere interest. The technical bar is absolute." },
+                  { k: "Open Research", v: "Every output is rigorously reviewed before publication. We build in public to establish a verifiable track record." },
+                  { k: "Independence", v: "Operating autonomously to produce data-driven work that commands the attention of industry professionals." },
                 ].map((it) => (
                   <div key={it.k}>
                     <dt className="eyebrow">{it.k}</dt>
@@ -128,12 +127,12 @@ function Home() {
                   Recruitment · Open
                 </div>
                 <div className="mt-1.5 font-display text-[20px] font-semibold text-ice lg:text-[24px]">
-                  Applications open for the 2026–27 cohort.
+                  We are hiring for the 2026 intake.
                 </div>
               </div>
             </div>
             <Link to="/apply" className="apply-cta">
-              Apply now <span aria-hidden>→</span>
+              Join us <span aria-hidden>→</span>
             </Link>
           </div>
         </div>

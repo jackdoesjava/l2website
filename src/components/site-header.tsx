@@ -63,7 +63,7 @@ export function SiteHeader() {
         <div className="hidden items-center gap-3 md:flex">
           <ThemeToggle />
           <Link to="/apply" className="apply-cta-sm inline-flex">
-            Apply <span aria-hidden>→</span>
+            Join <span aria-hidden>→</span>
           </Link>
         </div>
 
@@ -106,7 +106,7 @@ export function SiteHeader() {
             onClick={() => setOpen(false)}
             className="apply-cta-sm mt-5 self-start"
           >
-            Apply <span aria-hidden>→</span>
+            Join <span aria-hidden>→</span>
           </Link>
         </nav>
       </div>

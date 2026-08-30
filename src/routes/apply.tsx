@@ -5,13 +5,13 @@ import { QuantCanvas } from "@/components/quant-canvas";
 export const Route = createFileRoute("/apply")({
   head: () => ({
     meta: [
-      { title: "Apply — L² Research" },
+      { title: "Join · L² Research" },
       {
         name: "description",
         content:
-          "Apply to join L² Research. How the evaluation pipeline works and where to get in touch.",
+          "Recruitment at L² Research. Two tracks, three gates, and where to get in touch.",
       },
-      { property: "og:title", content: "Apply — L² Research" },
+      { property: "og:title", content: "Join · L² Research" },
       {
         property: "og:description",
         content: "The bar is explicit. Prior finance experience is not required.",
@@ -37,7 +37,7 @@ function Apply() {
           <div className="relative lg:col-span-6">
             <div className="eyebrow flex items-center gap-3">
               <span className="inline-block h-px w-8 bg-forest" />
-              § Recruitment · 2026–27
+              § Recruitment · 2026
             </div>
             <h1 className="mt-5 font-display text-[36px] font-light leading-[1.05] text-ice lg:text-[56px]">
               The bar is
@@ -45,13 +45,12 @@ function Apply() {
               <span className="font-semibold text-forest">explicit</span>.
             </h1>
             <p className="mt-8 max-w-lg font-sans text-[15px] leading-relaxed text-ice/80">
-              Recruitment runs in set windows each term so it never stalls our
-              research. Exceptional candidates scouted off-cycle are
-              fast-tracked.
+              Recruitment runs year-round so hiring never stalls the research.
+              Exceptional candidates are fast-tracked straight to interview.
             </p>
             <dl className="mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-ice/10 pt-8">
               {[
-                { k: "Termly", v: "Hiring windows" },
+                { k: "Rolling", v: "Intake" },
                 { k: "3 stages", v: "Evaluation pipeline" },
               ].map((s) => (
                 <div key={s.v}>
@@ -67,23 +66,25 @@ function Apply() {
           </div>
           <div className="lg:col-span-6">
             <p className="font-sans text-[16px] leading-relaxed text-ice/85 lg:text-[17px]">
-              Applicants are expected to have working fluency in probability
-              and statistics, competence with a scientific language (Python,
-              R, or equivalent), and the ability to read and defend a
-              technical paper. Prior finance experience is not required.
+              Theory candidates need probability, statistics and stochastic
+              calculus, and the ability to state and defend a proof.
+              Engineering candidates need systems fluency in Rust, C++ or
+              equivalent, and depth in modern machine learning. Prior finance
+              experience is not required.
             </p>
 
             <dl className="mt-10 grid gap-x-10 gap-y-6 sm:grid-cols-2">
               <div>
                 <dt className="eyebrow">Eligibility</dt>
                 <dd className="mt-2 font-sans text-[14px] leading-relaxed text-ice/75">
-                  Any STEM discipline. Undergraduate or postgraduate.
+                  Open to anyone who can do the work. Both tracks hire
+                  independently.
                 </dd>
               </div>
               <div>
                 <dt className="eyebrow">Commitment</dt>
                 <dd className="mt-2 font-sans text-[14px] leading-relaxed text-ice/75">
-                  One academic year, with output expected each term.
+                  Twelve months. Output is the measure, not hours.
                 </dd>
               </div>
               <div>
@@ -109,7 +110,7 @@ function Apply() {
                 rel="noreferrer"
                 className="apply-cta"
               >
-                Open application form <span aria-hidden>→</span>
+                Open the form <span aria-hidden>→</span>
               </a>
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
@@ -138,17 +139,17 @@ function Apply() {
             {
               n: "01",
               t: "Application & screen",
-              d: "A short intake form: CV, a GitHub or portfolio link if you write code, and two brief written answers on how you work through hard problems.",
+              d: "A short intake form: CV, links to code, papers or write-ups you own, and two brief written answers on how you work through hard problems.",
             },
             {
               n: "02",
               t: "Technical sandbox",
-              d: "A take-home in your track — logic problems for maths, an implementation task for CS. Roughly an hour of work, with a few days to fit it around coursework.",
+              d: "A take-home in your track: logic and proof problems for theory, an implementation task in Rust, C++ or machine learning for engineering. Roughly an hour of work, with a few days to return it.",
             },
             {
               n: "03",
               t: "Leadership interview",
-              d: "Forty-five minutes: defend your submission, talk through your CV, then a short live technical. Fluency in your own work is the point.",
+              d: "Forty-five minutes: defend your submission, walk through your prior work, then a short live technical. Fluency in your own work is the point.",
             },
           ].map((s) => (
             <li key={s.n} className="px-0 py-10 md:px-8 md:first:pl-0 md:last:pr-0">
@@ -175,7 +176,7 @@ function Apply() {
               Recruitment · Open
             </div>
             <div className="mt-1.5 font-display text-[20px] font-semibold text-ice lg:text-[24px]">
-              Applications for the 2026–27 cohort are open.
+              Both tracks are hiring.
             </div>
           </div>
           <a href={APPLY_FORM_URL} target="_blank" rel="noreferrer" className="apply-cta">
