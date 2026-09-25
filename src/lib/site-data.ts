@@ -49,5 +49,5 @@ export const MEMBERS = [
 
 export const ALUMNI: { name: string; role: string; now: string }[] = [];
 
-export const APPLY_FORM_URL = "https://forms.office.com/";
+export const APPLY_FORM_URL = "https://forms.gle/y5qHQhL6rnRDF4AP6";
 export const CONTACT_EMAIL = "info.l2research@gmail.com";
